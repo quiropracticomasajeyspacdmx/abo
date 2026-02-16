@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Lic. Alberto Santos | Maestría Jurídica</title>
+    <title>Lic. Alberto Santos | Firma Legal</title>
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -20,10 +20,8 @@
                         "secondary": "#a8b2c1",
                         "accent": "#c9a84c", 
                         "accent-dim": "#8c7335",
-                        "background-light": "#f0f4f8",
                         "background-dark": "#060f1c",
-                        "neutral-dark": "#0c1d32",
-                        "neutral-muted": "#5d6d81",
+                        "surface": "#0a1625",
                     },
                     fontFamily: {
                         "display": ["Manrope", "sans-serif"],
@@ -31,7 +29,6 @@
                     },
                     backgroundImage: {
                         'navy-gradient': 'linear-gradient(180deg, #0c1d32 0%, #060f1c 100%)',
-                        'paper-texture': "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
                     }
                 },
             },
@@ -39,328 +36,345 @@
     </script>
 
     <style>
-        body { font-family: 'Manrope', sans-serif; }
+        body { font-family: 'Manrope', sans-serif; scroll-behavior: smooth; }
         .font-serif { font-family: 'Cinzel', serif; }
         .hidden-section { display: none !important; }
         
-        /* Efecto de texto dorado elegante */
-        .text-gold-gradient {
-            background: linear-gradient(to bottom, #cfb56b 0%, #8c7335 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* Efecto dorado */
+        .text-gold { color: #c9a84c; }
+        .border-gold { border-color: #c9a84c; }
+        
+        /* Navegación activa */
+        .nav-link:hover { color: #c9a84c; transition: color 0.3s; }
     </style>
 
     <style>
-        #crm-system-container {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: #0d1b2e;
-            color: #eef2f7;
-            min-height: 100vh;
-            font-size: 16px;
-        }
+        #crm-system-container { font-family: 'Segoe UI', sans-serif; background: #0d1b2e; color: #eef2f7; min-height: 100vh; font-size: 16px; }
         #crm-system-container * { box-sizing: border-box; }
         .crm-nav { background: #112240; border-bottom: 1px solid #1e3a5f; padding: 12px 22px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-        .logo-crm { display: flex; align-items: center; gap: 12px; }
-        .logo-img-crm { height: 45px; width: auto; object-fit: contain; }
         .tabs { display: flex; gap: 6px; }
-        .tab { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid #1e3a5f; background: transparent; color: #7a8fa8; transition: all 0.2s; }
-        .tab:hover { background: #152945; }
+        .tab { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid #1e3a5f; background: transparent; color: #7a8fa8; }
         .tab.on { background: #1a2e48; border-color: #c9a84c; color: #c9a84c; }
         .crm-main { max-width: 850px; margin: 0 auto; padding: 30px 20px; }
-        .view { display: none; animation: fadeIn 0.3s ease; } .view.on { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-        .card-crm { background: #112240; border: 1px solid #1e3a5f; border-radius: 12px; padding: 26px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .card-crm h2 { font-size: 18px; font-weight: 700; color: #e2e8f0; margin-bottom: 8px; border-bottom: 1px solid #1e3a5f; padding-bottom: 10px; }
-        #crm-system-container input, #crm-system-container select, #crm-system-container textarea { 
-            background: #1a2e48; border: 1px solid #2d4a6d; border-radius: 6px; 
-            color: #fff; padding: 10px 12px; font-size: 14px; width: 100%; display: block; margin-top: 4px;
-        }
-        #crm-system-container input:focus { border-color: #c9a84c; outline: none; }
+        .view { display: none; } .view.on { display: block; }
+        .card-crm { background: #112240; border: 1px solid #1e3a5f; border-radius: 12px; padding: 26px; margin-bottom: 20px; }
+        #crm-system-container input, #crm-system-container select, #crm-system-container textarea { background: #1a2e48; border: 1px solid #2d4a6d; border-radius: 6px; color: #fff; padding: 10px 12px; width: 100%; display: block; margin-top: 4px; }
         .btn-crm { padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer; border: none; }
         .btn-nxt { background: #c9a84c; color: #0d1b2e; }
-        .btn-sub { background: #4caf82; color: #fff; }
-        .btn-prv { background: transparent; border: 1px solid #2d4a6d; color: #94a3b8; }
-        .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-        .chip { padding: 6px 14px; border-radius: 20px; font-size: 13px; border: 1px solid #2d4a6d; background: #1a2e48; color: #94a3b8; cursor: pointer; }
-        .chip.on { background: rgba(201,168,76,0.2); border-color: #c9a84c; color: #c9a84c; }
         .crm-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
         .crm-table th { text-align: left; padding: 12px; background: #0f2038; color: #c9a84c; border-bottom: 2px solid #1e3a5f; }
         .crm-table td { padding: 12px; border-bottom: 1px solid #1e3a5f; color: #cbd5e1; }
-        .crm-table tr:hover { background: rgba(255,255,255,0.03); cursor: pointer; }
+        .chip { padding: 6px 14px; border-radius: 20px; font-size: 13px; border: 1px solid #2d4a6d; background: #1a2e48; color: #94a3b8; cursor: pointer; margin-right: 5px; margin-bottom: 5px; display: inline-block;}
+        .chip.on { background: rgba(201,168,76,0.2); border-color: #c9a84c; color: #c9a84c; }
     </style>
 </head>
 
 <body class="bg-[#060f1c] text-gray-300 font-display antialiased">
 
 <div id="public-landing">
-    <header class="sticky top-0 z-50 w-full bg-[#060f1c]/95 backdrop-blur-md border-b border-white/5 px-6 py-4 flex items-center justify-between shadow-2xl">
-        <div class="flex items-center gap-4">
-            <img src="logo.png" alt="Lic. Alberto Santos" class="h-14 w-auto object-contain drop-shadow-md">
-            
-            <div class="hidden md:flex flex-col border-l border-white/10 pl-4">
-                <span class="text-sm font-serif font-bold tracking-widest text-gray-200 uppercase leading-none">Lic. Alberto Santos</span>
-                <span class="text-[10px] text-accent tracking-[0.3em] uppercase leading-none mt-1.5">Abogado Titular</span>
+    
+    <header class="sticky top-0 z-50 w-full bg-[#060f1c]/95 backdrop-blur-md border-b border-white/5 shadow-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <img src="logo.png" alt="Lic. Alberto Santos" class="h-12 w-auto object-contain">
+                <div class="hidden lg:flex flex-col border-l border-white/10 pl-4">
+                    <span class="text-sm font-serif font-bold tracking-widest text-white uppercase leading-none">Lic. Alberto Santos</span>
+                </div>
             </div>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="nav-link text-xs font-bold uppercase tracking-widest text-gray-400">Inicio</a>
+                <a href="#firma" class="nav-link text-xs font-bold uppercase tracking-widest text-gray-400">La Firma</a>
+                <a href="#areas" class="nav-link text-xs font-bold uppercase tracking-widest text-gray-400">Áreas</a>
+                <a href="#contacto" class="bg-accent/10 border border-accent/50 text-accent text-[10px] font-bold px-5 py-2 rounded-sm uppercase tracking-widest hover:bg-accent hover:text-[#060f1c] transition-all">
+                    Consulta
+                </a>
+            </nav>
+
+            <button class="md:hidden text-white" onclick="alert('Menú móvil desplegado')">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
         </div>
-        <a class="bg-transparent border border-accent/50 text-accent text-[10px] font-bold px-5 py-2 rounded-sm uppercase tracking-widest hover:bg-accent hover:text-[#060f1c] transition-all duration-300" href="#contacto">
-            Solicitar Evaluación
-        </a>
     </header>
 
     <main class="flex flex-col">
         
-        <section class="relative px-6 py-28 flex flex-col items-center text-center bg-navy-gradient overflow-hidden">
-            <div class="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] pointer-events-none"></div>
+        <section id="inicio" class="relative min-h-[85vh] flex items-center justify-center bg-navy-gradient overflow-hidden px-6">
+            <div class="absolute inset-0 opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
             
-            <div class="relative z-10 max-w-3xl mx-auto">
-                <span class="text-accent-dim text-xs font-bold tracking-[0.4em] uppercase mb-6 block">Trayectoria · Criterio · Discreción</span>
+            <div class="relative z-10 max-w-4xl mx-auto text-center">
+                <div class="inline-block mb-6 px-4 py-1 border border-accent/30 rounded-full bg-accent/5 backdrop-blur-sm">
+                    <span class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase">Excelencia Jurídica desde 1994</span>
+                </div>
                 
-                <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight tracking-tight mb-8 text-white drop-shadow-2xl">
-                    La ley no es un juego <br/>
-                    <span class="text-gold-gradient">de azar.</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight tracking-tight mb-8 text-white drop-shadow-2xl">
+                    Defensa de Alto Nivel <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a84c] to-[#f4e2aa]">Sin Concesiones.</span>
                 </h1>
                 
-                <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-10 font-light mx-auto max-w-2xl">
-                    Tras más de 30 años en los tribunales, he aprendido que <strong>la abogacía masiva es enemiga de la excelencia.</strong> 
-                    <br><br>
-                    Hoy, mi práctica es deliberadamente pequeña y selectiva. No busco volumen; busco casos que requieran estrategia profunda, técnica jurídica impecable y una dedicación absoluta que los grandes despachos ya no pueden ofrecer.
+                <p class="text-gray-400 text-sm md:text-lg leading-relaxed mb-12 font-light mx-auto max-w-2xl">
+                    Una firma boutique dedicada exclusivamente a asuntos de alta complejidad. 
+                    Aceptamos un número limitado de casos al año para garantizar una estrategia artesanal y una atención personal absoluta.
                 </p>
                 
-                <div class="flex justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Stylized_signature_example.png" alt="Firma" class="h-12 opacity-50 invert">
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#contacto" class="w-full sm:w-auto bg-accent text-[#060f1c] font-bold py-4 px-10 rounded-sm shadow-[0_0_25px_rgba(201,168,76,0.2)] hover:shadow-[0_0_35px_rgba(201,168,76,0.4)] transition-all uppercase text-xs tracking-widest">
+                        Solicitar Evaluación
+                    </a>
+                    <a href="#firma" class="w-full sm:w-auto text-white border border-white/20 hover:border-white/50 font-bold py-4 px-10 rounded-sm transition-all uppercase text-xs tracking-widest hover:bg-white/5">
+                        Conocer la Firma
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="px-6 py-20 bg-[#0a1625] border-t border-white/5">
-            <div class="max-w-5xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+        <section id="firma" class="py-24 bg-surface border-t border-white/5">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-accent/30"></div>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-serif font-bold text-white mb-6">30 Años de Criterio <br>y Carácter</h2>
+                        <p class="text-gray-400 text-sm leading-7 mb-6 text-justify">
+                            En un mundo legal obsesionado con la facturación masiva, he decidido caminar en sentido contrario. Mi práctica no es una maquila de demandas; es un taller de precisión jurídica.
+                        </p>
+                        <p class="text-gray-400 text-sm leading-7 mb-6 text-justify">
+                            No delego lo importante. Si su caso es admitido en este despacho, tendrá mi atención directa, mi experiencia acumulada en tres décadas de litigio y mi honestidad brutal sobre sus posibilidades reales.
+                        </p>
+                        <div class="flex items-center gap-4 mt-8">
+                            <div class="h-px w-12 bg-accent"></div>
+                            <span class="font-serif text-accent text-lg italic">Lic. Alberto Santos</span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-accent/30"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-[#060f1c] p-8 border border-white/5 hover:border-accent/20 transition-colors">
+                        <span class="material-symbols-outlined text-accent text-4xl mb-4">balance</span>
+                        <h3 class="text-white font-serif font-bold mb-2">Selectividad</h3>
+                        <p class="text-xs text-gray-500">Aceptación de casos inferior al 20% para asegurar dedicación total.</p>
+                    </div>
+                    <div class="bg-[#060f1c] p-8 border border-white/5 hover:border-accent/20 transition-colors">
+                        <span class="material-symbols-outlined text-accent text-4xl mb-4">visibility_off</span>
+                        <h3 class="text-white font-serif font-bold mb-2">Discreción</h3>
+                        <p class="text-xs text-gray-500">Manejo confidencial de asuntos sensibles y perfiles públicos.</p>
+                    </div>
+                    <div class="bg-[#060f1c] p-8 border border-white/5 hover:border-accent/20 transition-colors col-span-1 sm:col-span-2">
+                        <span class="material-symbols-outlined text-accent text-4xl mb-4">handshake</span>
+                        <h3 class="text-white font-serif font-bold mb-2">Lealtad Absoluta</h3>
+                        <p class="text-xs text-gray-500">Un abogado que entiende que detrás de cada expediente hay un patrimonio, una libertad o una familia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="areas" class="py-24 bg-[#060f1c] relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Especialización</span>
+                    <h2 class="text-3xl font-serif font-bold text-white mt-4">Áreas de Práctica</h2>
+                    <div class="w-24 h-0.5 bg-accent mx-auto mt-6"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="group relative bg-surface p-8 border border-white/5 hover:border-accent/50 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-accent text-4xl">gavel</span>
+                        </div>
+                        <h3 class="text-xl font-serif text-white mb-4 group-hover:text-accent transition-colors">Defensa Penal</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Estrategia defensiva en delitos patrimoniales y de cuello blanco. Atención prioritaria en etapas críticas del proceso.
+                        </p>
+                    </div>
+
+                    <div class="group relative bg-surface p-8 border border-white/5 hover:border-accent/50 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-accent text-4xl">real_estate_agent</span>
+                        </div>
+                        <h3 class="text-xl font-serif text-white mb-4 group-hover:text-accent transition-colors">Patrimonio Civil</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Resolución de conflictos en herencias complejas, disputas inmobiliarias y protección de activos familiares.
+                        </p>
+                    </div>
+
+                    <div class="group relative bg-surface p-8 border border-white/5 hover:border-accent/50 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-accent text-4xl">corporate_fare</span>
+                        </div>
+                        <h3 class="text-xl font-serif text-white mb-4 group-hover:text-accent transition-colors">Corporativo</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Blindaje legal preventivo para empresas y directivos. Consultoría estratégica para evitar el litigio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-24 bg-surface border-t border-white/5">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="bg-[#0c1d32] border border-accent/20 rounded-lg p-10 md:p-14 text-center shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-20 -left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-white mb-6 relative z-10">Solicitud de Representación</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8 relative z-10 max-w-2xl mx-auto">
+                        Actualmente nuestra agenda se encuentra limitada. Para evaluar si su caso cumple con el perfil de nuestra firma, por favor complete el proceso de admisión digital. 
+                    </p>
+                    <p class="text-gray-500 text-xs mb-10 uppercase tracking-widest relative z-10">
+                        Respuesta en 24-48 horas hábiles
+                    </p>
+
+                    <button onclick="switchView('app')" class="bg-accent hover:bg-[#b08d38] text-[#060f1c] font-bold py-4 px-12 rounded-sm tracking-widest uppercase text-xs shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-3 mx-auto relative z-10">
+                        <span>Iniciar Admisión</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-center gap-12 mt-16 text-center">
                     <div>
-                        <h2 class="text-2xl font-serif font-bold text-white mb-6">Artesanía Jurídica vs. Maquila Legal</h2>
-                        <div class="space-y-6">
-                            <p class="text-gray-400 text-sm leading-7">
-                                Muchos despachos delegan su caso a pasantes inexpertos mientras el titular solo firma. <strong>Yo no trabajo así.</strong>
-                            </p>
-                            <p class="text-gray-400 text-sm leading-7">
-                                Si decido tomar su asunto, usted tratará directamente conmigo. Estudiaré cada foja del expediente personalmente. Mi vocación no es económica, es intelectual y ética: resolver problemas complejos que otros dan por perdidos o que requieren una sensibilidad especial.
-                            </p>
-                            <div class="border-l-2 border-accent pl-4 mt-4">
-                                <p class="text-white italic text-sm">"Prefiero llevar 5 casos con maestría absoluta, que 50 con mediocridad."</p>
-                            </div>
-                        </div>
+                        <span class="block text-accent text-[10px] font-bold uppercase tracking-widest mb-2">Ubicación</span>
+                        <p class="text-gray-400 text-sm">Oficinas Privadas, CDMX<br><span class="text-xs text-gray-600">(Dirección exacta al confirmar cita)</span></p>
                     </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div class="bg-[#060f1c] p-6 border border-white/5 rounded-sm">
-                            <span class="block text-accent font-serif text-lg mb-2">01. Honestidad Brutal</span>
-                            <p class="text-xs text-gray-500">Si su caso no tiene viabilidad, se lo diré en la primera cita. No vendo falsas esperanzas ni prolongo litigios para inflar honorarios.</p>
-                        </div>
-                        <div class="bg-[#060f1c] p-6 border border-white/5 rounded-sm">
-                            <span class="block text-accent font-serif text-lg mb-2">02. Estrategia Dedicada</span>
-                            <p class="text-xs text-gray-500">El tiempo que no gasto buscando clientes nuevos, lo invierto en pensar cómo ganar los casos que ya tengo.</p>
-                        </div>
-                        <div class="bg-[#060f1c] p-6 border border-white/5 rounded-sm">
-                            <span class="block text-accent font-serif text-lg mb-2">03. Lealtad</span>
-                            <p class="text-xs text-gray-500">Mis clientes son pocos, pero tienen mi respaldo total. En situaciones críticas, saben quién contesta el teléfono.</p>
-                        </div>
+                    <div>
+                        <span class="block text-accent text-[10px] font-bold uppercase tracking-widest mb-2">Horario</span>
+                        <p class="text-gray-400 text-sm">Lunes a Jueves<br>10:00 AM - 6:00 PM</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="px-6 py-20 bg-[#060f1c] relative">
-            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-2xl font-serif font-bold text-white mb-2">Enfoque de la Práctica</h2>
-                <p class="text-gray-500 text-xs uppercase tracking-widest mb-12">Solo asuntos de alta complejidad</p>
-                
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="group">
-                        <h3 class="text-accent font-serif font-bold mb-3 group-hover:text-white transition-colors">Derecho Penal Estratégico</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Defensa y asesoría en delitos patrimoniales, de cuello blanco o situaciones que ponen en riesgo la libertad y el patrimonio familiar.</p>
-                    </div>
-                    <div class="group">
-                        <h3 class="text-accent font-serif font-bold mb-3 group-hover:text-white transition-colors">Litigio Civil Complejo</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Disputas contractuales, herencias conflictivas y protección de activos que requieren una ingeniería legal precisa.</p>
-                    </div>
-                    <div class="group">
-                        <h3 class="text-accent font-serif font-bold mb-3 group-hover:text-white transition-colors">Consultoría Preventiva</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Análisis de riesgos para empresas y particulares que prefieren evitar el tribunal antes que pisarlo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="px-6 py-24 bg-[#0a1625]" id="contacto">
-            <div class="max-w-2xl mx-auto bg-[#060f1c] border border-white/10 p-10 rounded-sm shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-accent/20 rounded-tr-3xl"></div>
-                <div class="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-accent/20 rounded-bl-3xl"></div>
-
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl font-serif font-bold text-white mb-4">¿Podemos trabajar juntos?</h2>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Actualmente, acepto menos del 20% de las solicitudes que recibo. Esto asegura que cada cliente activo reciba la atención que merece.
-                    </p>
-                    <p class="text-gray-500 text-xs mt-4">
-                        Por favor, utilice el siguiente sistema seguro para describir brevemente su situación. Si considero que puedo aportarle valor real, me pondré en contacto personalmente.
-                    </p>
-                </div>
-
-                <button onclick="switchView('app')" class="w-full bg-accent hover:bg-[#b08d38] text-[#060f1c] font-bold py-5 rounded-sm tracking-widest uppercase text-xs shadow-lg transition-all flex items-center justify-center gap-3">
-                    <span>Iniciar Proceso de Admisión</span>
-                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                </button>
-                
-                <p class="text-center text-[9px] text-gray-600 mt-6 uppercase">La información compartida está protegida por el secreto profesional.</p>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#040912] text-white/30 py-12 px-6 text-center border-t border-white/5">
+    <footer class="bg-[#040912] text-white/30 py-10 px-6 border-t border-white/5 text-center">
         <div class="flex flex-col items-center gap-4 mb-6">
-            <img src="logo.png" class="h-10 w-auto opacity-40 grayscale">
-            <span class="font-serif text-sm tracking-widest text-white/40">LIC. ALBERTO SANTOS</span>
+            <img src="logo.png" class="h-8 w-auto opacity-30 grayscale">
+            <span class="font-serif text-xs tracking-widest text-white/30">LIC. ALBERTO SANTOS</span>
         </div>
-        <p class="text-[10px] leading-relaxed max-w-md mx-auto mb-8">
-            El ejercicio del derecho requiere dignidad, estudio y valentía. <br>
-            Oficina Privada en Ciudad de México. Atención únicamente con cita previa.
-        </p>
+        <p class="text-[10px] mb-6">Derechos Reservados © 2026. Aviso de Privacidad.</p>
         
-        <button onclick="switchView('admin')" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-accent transition-colors px-3 py-1">
-            [ Acceso Administrativo ]
+        <button onclick="switchView('admin')" class="text-[9px] font-bold uppercase tracking-widest text-white/5 hover:text-accent transition-colors px-3 py-1 border border-transparent hover:border-white/5 rounded">
+            System Admin
         </button>
     </footer>
 </div>
 
 <div id="crm-system-container" class="hidden-section">
     <nav class="crm-nav">
-        <div class="logo-crm">
-            <img src="logo.png" alt="Logo" class="logo-img-crm">
-            <div class="hidden sm:block">
-                <div style="font-size:14px; font-weight:700; color:#c0c8d4">Gestión de Despacho</div>
-                <div style="font-size:10px; color:#c9a84c; text-transform:uppercase">Lic. Alberto Santos</div>
+        <div style="display:flex; align-items:center; gap:10px">
+            <img src="logo.png" style="height:35px">
+            <div>
+                <div style="font-size:14px; font-weight:700; color:#c0c8d4">Gestión Interna</div>
             </div>
         </div>
         <div class="tabs">
-            <button class="tab on" onclick="showTab('form',this)">📋 Nueva Solicitud</button>
+            <button class="tab on" onclick="showTab('form',this)">📋 Formulario</button>
             <button class="tab" onclick="showTab('crm',this)">🗂 Expedientes <span id="badge" style="display:none;background:#c9a84c;color:#0d1b2e;border-radius:10px;padding:1px 6px;font-size:10px;margin-left:4px"></span></button>
-            <button class="tab" style="border-color: #e05c5c; color: #e05c5c;" onclick="exitApp()">✕ Cerrar</button>
+            <button class="tab" style="border-color: #e05c5c; color: #e05c5c;" onclick="exitApp()">✕ Volver al Sitio</button>
         </div>
     </nav>
 
     <div class="crm-main">
         <div id="vform" class="view on">
             <div style="text-align:center; margin-bottom:30px">
-                <h1 style="color:#e2e8f0; font-size:24px; font-weight:800; margin-bottom:5px">Evaluación de Caso</h1>
-                <p style="color:#94a3b8; font-size:14px">Formulario de admisión preliminar</p>
+                <h1 style="color:#e2e8f0; font-size:22px; font-weight:700;">Alta de Solicitud</h1>
+                <p style="color:#94a3b8; font-size:13px">Uso exclusivo para nuevos prospectos</p>
             </div>
-
+            
             <div id="p1">
                 <div class="card-crm">
-                    <h2>👤 Datos del Interesado</h2>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px">
-                        <div><label style="color:#94a3b8; font-size:12px; font-weight:bold">Nombre Completo</label><input id="nombre" type="text" placeholder="Su nombre"></div>
-                        <div><label style="color:#94a3b8; font-size:12px; font-weight:bold">Teléfono de Contacto</label><input id="tel" type="tel" placeholder="Número directo"></div>
-                        <div style="grid-column: span 2"><label style="color:#94a3b8; font-size:12px; font-weight:bold">Correo Electrónico</label><input id="email" type="email"></div>
+                    <h2 style="color:#e2e8f0; font-size:16px; margin-bottom:15px; border-bottom:1px solid #1e3a5f; padding-bottom:10px">1. Identificación</h2>
+                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Nombre Completo</label>
+                    <input id="nombre" type="text" placeholder="Nombre del interesado">
+                    
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px">
+                        <div>
+                            <label style="color:#94a3b8; font-size:12px; font-weight:bold">Teléfono</label>
+                            <input id="tel" type="tel">
+                        </div>
+                        <div>
+                            <label style="color:#94a3b8; font-size:12px; font-weight:bold">Email</label>
+                            <input id="email" type="email">
+                        </div>
                     </div>
                 </div>
-                <div style="display:flex; justify-content:flex-end"><button class="btn-crm btn-nxt" onclick="go(2)">Continuar →</button></div>
+                <div style="text-align:right"><button class="btn-crm btn-nxt" onclick="go(2)">Siguiente</button></div>
             </div>
 
             <div id="p2" style="display:none">
                 <div class="card-crm">
-                    <h2>⚖️ Naturaleza del Asunto</h2>
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Área relacionada</label>
-                    <div class="chips" id="chips-area">
-                        <div class="chip" onclick="selChip(this)">Penal / Delitos</div>
-                        <div class="chip" onclick="selChip(this)">Civil / Patrimonial</div>
-                        <div class="chip" onclick="selChip(this)">Familiar / Sucesiones</div>
+                    <h2 style="color:#e2e8f0; font-size:16px; margin-bottom:15px; border-bottom:1px solid #1e3a5f; padding-bottom:10px">2. El Asunto</h2>
+                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Clasificación</label>
+                    <div style="margin-top:5px; margin-bottom:15px">
+                        <div class="chip" onclick="selChip(this)">Penal</div>
+                        <div class="chip" onclick="selChip(this)">Civil</div>
+                        <div class="chip" onclick="selChip(this)">Familiar</div>
                         <div class="chip" onclick="selChip(this)">Corporativo</div>
-                        <div class="chip" onclick="selChip(this)">Otro Complejo</div>
+                        <div class="chip" onclick="selChip(this)">Otro</div>
                     </div>
                     
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold; margin-top:15px; display:block">Resumen de la Situación</label>
-                    <textarea id="desc" rows="4" placeholder="Por favor sea breve y directo sobre los hechos..."></textarea>
+                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Descripción de Hechos</label>
+                    <textarea id="desc" rows="4"></textarea>
                     
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold; margin-top:15px; display:block">Urgencia</label>
+                    <label style="color:#94a3b8; font-size:12px; font-weight:bold; margin-top:10px">Nivel de Urgencia</label>
                     <select id="urgencia">
-                        <option value="baja">Puedo esperar una cita</option>
-                        <option value="media">Requiere atención esta semana</option>
-                        <option value="alta">Urgencia Crítica / Legal en curso</option>
+                        <option value="baja">Baja (Consultoría)</option>
+                        <option value="media">Media (Esta semana)</option>
+                        <option value="alta">Alta (Detención/Embargo)</option>
                     </select>
                 </div>
                 <div style="display:flex; justify-content:space-between">
-                    <button class="btn-crm btn-prv" onclick="go(1)">← Atrás</button>
-                    <button class="btn-crm btn-sub" onclick="submit()">Enviar para Revisión</button>
+                    <button class="btn-crm" style="background:transparent; border:1px solid #2d4a6d; color:#94a3b8" onclick="go(1)">Atrás</button>
+                    <button class="btn-crm btn-nxt" onclick="submit()">Enviar Solicitud</button>
                 </div>
             </div>
         </div>
 
         <div id="vcrm" class="view">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px">
-                <h2 style="color:#e2e8f0; font-size:20px; font-weight:bold">Bandeja de Entrada</h2>
-                <button class="btn-crm btn-prv" style="font-size:11px; padding:6px 12px" onclick="clearData()">🗑 Limpiar Historial</button>
+            <div style="display:flex; justify-content:space-between; margin-bottom:15px">
+                <h2 style="color:#fff; font-size:18px">Bandeja de Entrada</h2>
+                <button onclick="clearData()" style="background:#ef4444; border:none; color:white; padding:5px 10px; border-radius:4px; font-size:11px; cursor:pointer">Borrar Todo</button>
             </div>
-            
-            <div class="card-crm" style="padding:0; overflow:hidden">
-                <div style="overflow-x:auto">
-                    <table class="crm-table">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Remitente</th>
-                                <th>Contacto</th>
-                                <th>Clasificación</th>
-                                <th>Prioridad</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody"></tbody>
-                    </table>
-                </div>
-                <div id="empty-msg" style="padding:30px; text-align:center; color:#64748b; font-size:13px">
-                    No hay solicitudes pendientes de revisión.
-                </div>
+            <div class="card-crm" style="padding:0; overflow-x:auto">
+                <table class="crm-table">
+                    <thead><tr><th>Fecha</th><th>Nombre</th><th>Tel</th><th>Área</th><th>Prioridad</th></tr></thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+                <div id="empty-msg" style="padding:20px; text-align:center; font-size:13px; color:#64748b">Sin registros</div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    // --- LÓGICA DE NEGOCIO ---
-    const PASSWORD = "admin123"; 
-    let DB = JSON.parse(localStorage.getItem('albertosantos_db')) || []; 
-    let currentStep = 1;
+    /* --- SISTEMA LÓGICO --- */
+    const PASSWORD = "admin123";
+    let DB = JSON.parse(localStorage.getItem('albertosantos_db')) || [];
     let selectedArea = "";
 
     updateBadge();
 
+    /* NAVEGACIÓN */
     function switchView(target) {
-        const landing = document.getElementById('public-landing');
+        const home = document.getElementById('public-landing');
         const app = document.getElementById('crm-system-container');
-
+        
         if (target === 'app') {
-            landing.classList.add('hidden-section');
+            home.classList.add('hidden-section');
             app.classList.remove('hidden-section');
             showTab('form');
             window.scrollTo(0,0);
         } else if (target === 'admin') {
-            const pass = prompt("🔐 Área Restringida\nIngrese clave de acceso:");
+            const pass = prompt("Acceso Administrativo:");
             if (pass === PASSWORD) {
-                landing.classList.add('hidden-section');
+                home.classList.add('hidden-section');
                 app.classList.remove('hidden-section');
                 showTab('crm');
-            } else if (pass !== null) {
-                alert("⛔ Acceso denegado.");
-            }
+            } else if(pass !== null) alert("Clave incorrecta");
         }
     }
 
     function exitApp() {
-        if(confirm("¿Volver a la página pública?")) {
-            document.getElementById('crm-system-container').classList.add('hidden-section');
-            document.getElementById('public-landing').classList.remove('hidden-section');
-            window.scrollTo(0,0);
-        }
+        document.getElementById('crm-system-container').classList.add('hidden-section');
+        document.getElementById('public-landing').classList.remove('hidden-section');
+        window.scrollTo(0,0);
     }
 
     function showTab(id, btn) {
@@ -371,11 +385,11 @@
         if(id === 'crm') renderTable();
     }
 
-    function go(step) {
-        if(step === 2 && !document.getElementById('nombre').value) return alert("Por favor indique su nombre.");
-        document.getElementById('p1').style.display = step === 1 ? 'block' : 'none';
-        document.getElementById('p2').style.display = step === 2 ? 'block' : 'none';
-        currentStep = step;
+    /* FORMULARIO */
+    function go(n) {
+        if(n===2 && !document.getElementById('nombre').value) return alert("Nombre requerido");
+        document.getElementById('p1').style.display = n===1 ? 'block':'none';
+        document.getElementById('p2').style.display = n===2 ? 'block':'none';
     }
 
     function selChip(el) {
@@ -385,31 +399,25 @@
     }
 
     function submit() {
-        if(!selectedArea) return alert("Por favor clasifique el asunto.");
+        if(!selectedArea) return alert("Seleccione área");
         
-        const record = {
+        const rec = {
             id: Date.now(),
             date: new Date().toLocaleDateString(),
             name: document.getElementById('nombre').value,
             tel: document.getElementById('tel').value,
-            email: document.getElementById('email').value,
             area: selectedArea,
             desc: document.getElementById('desc').value,
             urgency: document.getElementById('urgencia').value
         };
-
-        DB.push(record);
-        saveDB(); 
         
-        alert("✅ Solicitud enviada correctamente.\n\nEl Lic. Santos revisará su caso. Si es viable, nos comunicaremos al teléfono proporcionado.");
-        resetForm();
-        // Simular regreso a home
-        document.getElementById('crm-system-container').classList.add('hidden-section');
-        document.getElementById('public-landing').classList.remove('hidden-section');
-        window.scrollTo(0,0);
-    }
-
-    function resetForm() {
+        DB.push(rec);
+        localStorage.setItem('albertosantos_db', JSON.stringify(DB));
+        updateBadge();
+        
+        alert("Recibido. Nos pondremos en contacto si su caso es viable.");
+        
+        // Reset
         document.getElementById('nombre').value = "";
         document.getElementById('tel').value = "";
         document.getElementById('email').value = "";
@@ -417,52 +425,35 @@
         selectedArea = "";
         document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
         go(1);
+        exitApp();
     }
 
-    function saveDB() {
-        localStorage.setItem('albertosantos_db', JSON.stringify(DB));
-        updateBadge();
-    }
-
-    function updateBadge() {
-        const badge = document.getElementById('badge');
-        if(DB.length > 0) {
-            badge.style.display = 'inline-block';
-            badge.innerText = DB.length;
-            document.getElementById('empty-msg').style.display = 'none';
-        } else {
-            badge.style.display = 'none';
-            document.getElementById('empty-msg').style.display = 'block';
-        }
-    }
-
+    /* TABLA DATOS */
     function renderTable() {
         const tbody = document.getElementById('tbody');
         tbody.innerHTML = "";
-        
-        DB.slice().reverse().forEach(row => {
+        DB.slice().reverse().forEach(r => {
             const tr = document.createElement('tr');
-            let color = row.urgency === 'alta' ? '#ef4444' : row.urgency === 'media' ? '#f59e0b' : '#10b981';
-            
-            tr.innerHTML = `
-                <td style="color:#64748b">${row.date}</td>
-                <td style="font-weight:bold; color:#e2e8f0">${row.name}</td>
-                <td><a href="tel:${row.tel}" style="color:#c9a84c; text-decoration:none">📞 ${row.tel}</a></td>
-                <td><span style="padding:2px 8px; border-radius:10px; background:#1e293b; font-size:11px border:1px solid #334155">${row.area}</span></td>
-                <td><div style="width:10px; height:10px; border-radius:50%; background:${color}; display:inline-block; margin-right:5px"></div></td>
-            `;
-            tr.onclick = () => alert(`📝 DETALLE DE SOLICITUD:\n\nRemitente: ${row.name}\nAsunto: ${row.desc}\nContacto: ${row.email}\nTel: ${row.tel}`);
+            const color = r.urgency==='alta'?'#ef4444':r.urgency==='media'?'#f59e0b':'#10b981';
+            tr.innerHTML = `<td>${r.date}</td><td style="font-weight:bold;color:#fff">${r.name}</td><td>${r.tel}</td><td>${r.area}</td><td><span style="color:${color}">●</span></td>`;
+            tr.onclick = () => alert(`Detalle:\n${r.name}\n${r.desc}`);
             tbody.appendChild(tr);
         });
         updateBadge();
     }
 
-    function clearData() {
-        if(confirm("⚠️ ¿Eliminar todo el historial?\nEsta acción es irreversible.")) {
-            DB = [];
-            saveDB();
-            renderTable();
+    function updateBadge() {
+        const b = document.getElementById('badge');
+        const e = document.getElementById('empty-msg');
+        if(DB.length > 0) {
+            b.style.display = 'inline-block'; b.innerText = DB.length; e.style.display='none';
+        } else {
+            b.style.display = 'none'; e.style.display='block';
         }
+    }
+
+    function clearData() {
+        if(confirm("Borrar todo?")) { DB=[]; localStorage.setItem('albertosantos_db', JSON.stringify(DB)); renderTable(); }
     }
 </script>
 </body>
