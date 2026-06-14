@@ -3,8 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Alberto Santos | Estrategia Jurídica Selectiva</title>
-    <meta name="description" content="Despacho jurídico especializado en casos complejos. 30 años de experiencia. Máximo 10 casos anuales por excelencia. CDMX.">
+    <title>Lic. Alberto Santos | Abogado en CDMX - Estrategia Jurídica Selectiva</title>
+    <meta name="description" content="Despacho jurídico especializado en casos complejos en Ciudad de México. 30 años de experiencia. Máximo 10 casos anuales por excelencia. Defensa penal, litigio civil y consultoría estratégica.">
+    <meta name="keywords" content="abogado CDMX, abogado ciudad de méxico, defensa penal, litigio civil, abogado experto, consultoría jurídica, abogado penalista, abogado civil">
+    <meta name="author" content="Lic. Alberto Santos">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quiropracticomasajeyspacdmx.github.io/abo/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quiropracticomasajeyspacdmx.github.io/abo/">
+    <meta property="og:title" content="Lic. Alberto Santos | Abogado en CDMX">
+    <meta property="og:description" content="Estrategia jurídica selectiva. 30 años de experiencia. Máximo 10 casos complejos al año. CDMX.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://quiropracticomasajeyspacdmx.github.io/abo/">
+    <meta property="twitter:title" content="Lic. Alberto Santos | Abogado en CDMX">
+    <meta property="twitter:description" content="Estrategia jurídica selectiva. 30 años de experiencia. Máximo 10 casos complejos al año. CDMX.">
+    <meta property="twitter:image" content="logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Lic. Alberto Santos",
+        "description": "Despacho jurídico especializado en casos complejos. 30 años de experiencia.",
+        "url": "https://quiropracticomasajeyspacdmx.github.io/abo/",
+        "image": "logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ciudad de México",
+            "addressCountry": "MX"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ciudad de México"
+        },
+        "priceRange": "$$$",
+        "openingHours": "Mo-Th 09:00-18:00",
+        "sameAs": []
+    }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +76,7 @@
                         'gold-400': '#c9a961',
                         'gold-500': '#b8860b',
                         'gold-600': '#9a7209',
+                        'gold-700': '#7a5a07',
                     },
                     fontFamily: {
                         'serif': ['Cinzel', 'serif'],
@@ -44,6 +92,22 @@
             font-family: 'Cormorant Garamond', serif;
         }
         
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #c9a961;
+            color: #0a1628;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
         .gold-gradient-text {
             background: linear-gradient(135deg, #c9a961 0%, #d4af37 50%, #b8860b 100%);
             -webkit-background-clip: text;
@@ -52,7 +116,7 @@
         }
         
         .gold-gradient-text-dark {
-            background: linear-gradient(135deg, #9a7209 0%, #b8860b 50%, #c9a961 100%);
+            background: linear-gradient(135deg, #7a5a07 0%, #9a7209 50%, #b8860b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -63,7 +127,7 @@
         }
         
         .gold-border-dark {
-            border: 1px solid rgba(154, 114, 9, 0.3);
+            border: 1px solid rgba(122, 90, 7, 0.4);
         }
         
         .gold-shadow {
@@ -80,8 +144,9 @@
         }
         
         .cream-card {
-            background: linear-gradient(135deg, rgba(250, 248, 245, 0.9) 0%, rgba(245, 240, 232, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.98) 100%);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(122, 90, 7, 0.2);
         }
         
         .scroll-reveal {
@@ -103,25 +168,13 @@
         
         .input-field {
             background: rgba(10, 22, 40, 0.6);
-            border: 1px solid rgba(201, 169, 97, 0.2);
+            border: 1px solid rgba(201, 169, 97, 0.3);
             transition: all 0.3s ease;
         }
         
         .input-field:focus {
             border-color: #c9a961;
-            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
-            outline: none;
-        }
-        
-        .input-field-light {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(154, 114, 9, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .input-field-light:focus {
-            border-color: #b8860b;
-            box-shadow: 0 0 0 3px rgba(154, 114, 9, 0.1);
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
             outline: none;
         }
         
@@ -136,13 +189,13 @@
         }
         
         .btn-primary-dark {
-            background: linear-gradient(135deg, #9a7209 0%, #b8860b 100%);
+            background: linear-gradient(135deg, #9a7209 0%, #7a5a07 100%);
             transition: all 0.3s ease;
         }
         
         .btn-primary-dark:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(154, 114, 9, 0.3);
+            box-shadow: 0 10px 30px rgba(154, 114, 9, 0.4);
         }
         
         .section-divider {
@@ -152,7 +205,7 @@
         
         .section-divider-dark {
             height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(154, 114, 9, 0.4) 50%, transparent 100%);
+            background: linear-gradient(90deg, transparent 0%, rgba(122, 90, 7, 0.4) 50%, transparent 100%);
         }
 
         /* Custom Scrollbar */
@@ -176,12 +229,33 @@
         .logo-container {
             filter: drop-shadow(0 4px 20px rgba(201, 169, 97, 0.3));
         }
+        
+        /* Respect reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            
+            .animate-bounce {
+                animation: none;
+            }
+            
+            * {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
 
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 navy-card border-b border-white/10">
+    <nav class="fixed w-full z-50 navy-card border-b border-white/10" aria-label="Navegación principal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -204,7 +278,7 @@
                 </div>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gold-400">
+                    <button id="mobile-menu-btn" class="text-gold-400" aria-label="Abrir menú de navegación" aria-expanded="false">
                         <span class="material-icons">menu</span>
                     </button>
                 </div>
@@ -212,7 +286,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden navy-card border-t border-white/10">
+        <div id="mobile-menu" class="hidden md:hidden navy-card border-t border-white/10" role="navigation" aria-label="Menú móvil">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#filosofia" class="block px-3 py-2 text-gray-300 hover:text-gold-400">Filosofía</a>
                 <a href="#servicios" class="block px-3 py-2 text-gray-300 hover:text-gold-400">Práctica</a>
@@ -222,6 +296,9 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content">
+
     <!-- Hero Section - FONDO OSCURO -->
     <section class="relative min-h-screen flex items-center justify-center hero-pattern pt-20 bg-navy-900">
         <div class="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-navy-900/70 to-navy-900"></div>
@@ -230,12 +307,12 @@
             <div class="scroll-reveal">
                 <!-- Logo Original -->
                 <div class="mb-8 inline-block logo-container">
-                    <img src="logo.png" alt="Lic. Alberto Santos - Logo" class="w-48 h-48 mx-auto object-contain">
+                    <img src="logo.png" alt="" role="presentation" class="w-48 h-48 mx-auto object-contain" width="192" height="192">
                 </div>
                 
-                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 gold-gradient-text">
+                <h2 class="font-serif text-5xl md:text-7xl font-bold mb-6 gold-gradient-text">
                     La ley no es un juego de azar.
-                </h1>
+                </h2>
                 
                 <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-8"></div>
                 
@@ -269,7 +346,7 @@
         </div>
 
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <span class="material-icons text-gold-400 text-3xl">keyboard_arrow_down</span>
+            <span class="material-icons text-gold-400 text-3xl" aria-hidden="true">keyboard_arrow_down</span>
         </div>
     </section>
 
@@ -278,36 +355,36 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="scroll-reveal">
                 <div class="text-center mb-16">
-                    <p class="text-gold-500 font-serif text-2xl md:text-3xl font-bold mb-4">
+                    <h2 class="text-gold-700 font-serif text-2xl md:text-3xl font-bold mb-4">
                         30 años entendiendo cómo funciona realmente el sistema.
-                    </p>
-                    <div class="flex items-center justify-center gap-4 text-gray-600 text-sm tracking-widest">
+                    </h2>
+                    <div class="flex items-center justify-center gap-4 text-gray-700 text-sm tracking-widest">
                         <span>Trayectoria</span>
-                        <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                        <span class="w-2 h-2 rounded-full bg-gold-600"></span>
                         <span>Criterio</span>
-                        <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                        <span class="w-2 h-2 rounded-full bg-gold-600"></span>
                         <span>Serenidad</span>
                     </div>
                 </div>
 
-                <div class="cream-card rounded-lg p-8 md:p-12 gold-border-dark mb-12">
-                    <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-elegant">
+                <div class="cream-card rounded-lg p-8 md:p-12 mb-12">
+                    <p class="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 font-elegant">
                         La ley está en los códigos, pero la estrategia se forja en la práctica diaria. 
                         He dedicado tres décadas a comprender la diferencia entre lo que la ley dice 
                         y lo que los tribunales hacen.
                     </p>
-                    <p class="text-lg text-gold-500 font-semibold italic">
+                    <p class="text-lg text-gold-700 font-semibold italic">
                         Esa brecha—entre el "deber ser" y la realidad—es donde se ganan o pierden los casos.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                    <div class="cream-card rounded-lg p-8 hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-gold-500 text-3xl">person_play</span>
+                            <span class="material-icons text-gold-700 text-3xl flex-shrink-0" aria-hidden="true">person_play</span>
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">El Titular Trabaja</h3>
-                                <p class="text-gray-700 leading-relaxed">
+                                <h3 class="font-serif text-xl font-bold text-gold-700 mb-3">El Titular Trabaja</h3>
+                                <p class="text-gray-800 leading-relaxed">
                                     No hay intermediarios ni pasantes. Su expediente no pasa de mano en mano. 
                                     La estrategia la diseño y la ejecuto yo, de principio a fin.
                                 </p>
@@ -315,12 +392,12 @@
                         </div>
                     </div>
 
-                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                    <div class="cream-card rounded-lg p-8 hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-gold-500 text-3xl">volume_off</span>
+                            <span class="material-icons text-gold-700 text-3xl flex-shrink-0" aria-hidden="true">volume_off</span>
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">La Discreción es Rentable</h3>
-                                <p class="text-gray-700 leading-relaxed">
+                                <h3 class="font-serif text-xl font-bold text-gold-700 mb-3">La Discreción es Rentable</h3>
+                                <p class="text-gray-800 leading-relaxed">
                                     A veces, la mejor victoria es la que no hace ruido. 
                                     Priorizo la solución estratégica sobre el litigio innecesario. 
                                     El silencio protege su reputación y su patrimonio.
@@ -329,12 +406,12 @@
                         </div>
                     </div>
 
-                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                    <div class="cream-card rounded-lg p-8 hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-gold-500 text-3xl">medical_services</span>
+                            <span class="material-icons text-gold-700 text-3xl flex-shrink-0" aria-hidden="true">medical_services</span>
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">Diagnóstico Directo</h3>
-                                <p class="text-gray-700 leading-relaxed">
+                                <h3 class="font-serif text-xl font-bold text-gold-700 mb-3">Diagnóstico Directo</h3>
+                                <p class="text-gray-800 leading-relaxed">
                                     En la primera consulta sabrá si su caso tiene viabilidad real. 
                                     Cobrarle por un asunto perdido va contra mi ética profesional.
                                 </p>
@@ -342,12 +419,12 @@
                         </div>
                     </div>
 
-                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                    <div class="cream-card rounded-lg p-8 hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-gold-500 text-3xl">gavel</span>
+                            <span class="material-icons text-gold-700 text-3xl flex-shrink-0" aria-hidden="true">gavel</span>
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">No le diré lo que quiere escuchar.</h3>
-                                <p class="text-gray-700 leading-relaxed">
+                                <h3 class="font-serif text-xl font-bold text-gold-700 mb-3">No le diré lo que quiere escuchar.</h3>
+                                <p class="text-gray-800 leading-relaxed">
                                     Le diré, con honestidad y estrategia, exactamente dónde estamos parados 
                                     y cuál es la ruta más sólida para salir de ahí.
                                 </p>
@@ -357,7 +434,7 @@
                 </div>
 
                 <div class="mt-12 text-center">
-                    <p class="text-2xl md:text-3xl font-serif italic gold-gradient-text-dark">
+                    <p class="text-2xl md:text-3xl font-serif italic text-gold-700 font-semibold">
                         "Un abogado barato sale carísimo."
                     </p>
                 </div>
@@ -386,7 +463,7 @@
                 <div class="space-y-6">
                     <div class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-green-400 text-3xl flex-shrink-0">check_circle</span>
+                            <span class="material-icons text-green-400 text-3xl flex-shrink-0" aria-hidden="true">check_circle</span>
                             <div>
                                 <h3 class="font-serif text-xl font-bold text-gold-400 mb-3">Garantías realistas</h3>
                                 <p class="text-gray-300 leading-relaxed">
@@ -400,7 +477,7 @@
 
                     <div class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-green-400 text-3xl flex-shrink-0">check_circle</span>
+                            <span class="material-icons text-green-400 text-3xl flex-shrink-0" aria-hidden="true">check_circle</span>
                             <div>
                                 <h3 class="font-serif text-xl font-bold text-gold-400 mb-3">Honorarios transparentes</h3>
                                 <p class="text-gray-300 leading-relaxed">
@@ -414,395 +491,515 @@
 
                     <div class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all">
                         <div class="flex items-start gap-4">
-                            <span class="material-icons text-green-400 text-3xl flex-shrink-0">check_circle</span>
+                            <span class="material-icons text-green-400 text-3xl flex-shrink-0" aria-hidden="true">check_circle</span>
                             <div>
-                                <h3 class="font-serif text-xl f text-4xl text-accent mb-4">person_play</span>
-                    <h3 class="font-serif font-bold text-lg mb-2">El Titular Trabaja</h3>
-                    <p class="text-sm text-gray-600">No hay intermediarios. Su expediente no pasa de mano en mano. La estrategia la diseño y la ejecuto yo.</p>
-                </div>
-                <div class="bg-white p-8 shadow-lg border-t-4 border-[#0c1d32] hover:border-accent transition-colors">
-                    <span class="material-symbols-outlined text-4xl text-accent mb-4">volume_off</span>
-                    <h3 class="font-serif font-bold text-lg mb-2">El Silencio es Rentable</h3>
-                    <p class="text-sm text-gray-600">A veces, la mejor victoria es la que no hace ruido. Priorizo la discreción y la solución rápida sobre el litigio eterno.</p>
-                </div>
-                <div class="bg-white p-8 shadow-lg border-t-4 border-[#0c1d32] hover:border-accent transition-colors">
-                    <span class="material-symbols-outlined text-4xl text-accent mb-4">medical_services</span>
-                    <h3 class="font-serif font-bold text-lg mb-2">Diagnóstico sin Anestesia</h3>
-                    <p class="text-sm text-gray-600">En la primera consulta sabrá si su caso tiene futuro. Cobrarle por un caso perdido va contra mis principios.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-12 bg-accent text-[#060f1c] text-center px-6">
-            <p class="text-lg md:text-2xl font-serif font-bold tracking-wide">"Un abogado barato sale carísimo."</p>
-        </section>
-
-        <section class="py-24 bg-background-dark relative overflow-hidden">
-            <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')]"></div>
-            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <span class="material-symbols-outlined text-accent text-5xl mb-6">gavel</span>
-                <h2 class="text-3xl font-serif font-bold text-white mb-6">No le diré lo que quiere escuchar.</h2>
-                <p class="text-xl text-gray-300 font-light leading-relaxed mb-8">
-                    Le diré, con crudeza y estrategia, exactamente dónde estamos parados y cómo vamos a salir de ahí.
-                </p>
-                <div class="w-20 h-1 bg-accent mx-auto"></div>
-            </div>
-        </section>
-
-        <section id="manifiesto" class="py-24 bg-surface border-y border-white/5">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-16">
-                    <div>
-                        <h2 class="text-accent text-sm font-bold uppercase tracking-[0.3em] mb-4">Manifiesto de Ética</h2>
-                        <h3 class="text-3xl font-serif font-bold text-white mb-6">Lo que NO encontrará aquí</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            He construido mi reputación diciendo "no" a las malas prácticas que manchan esta profesión. Mi lealtad no se renta, se compromete.
-                        </p>
-                        <ul class="space-y-6">
-                            <li class="flex items-start gap-4">
-                                <span class="text-red-500 font-bold text-xl">✕</span>
-                                <div>
-                                    <strong class="text-white block text-sm mb-1">No encontrará garantías absurdas</strong>
-                                    <p class="text-xs text-gray-500">Quien le garantiza un resultado al 100% le está mintiendo. Yo garantizo la mejor técnica jurídica humanamente posible.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="text-red-500 font-bold text-xl">✕</span>
-                                <div>
-                                    <strong class="text-white block text-sm mb-1">No encontrará "sorpresas" en la factura</strong>
-                                    <p class="text-xs text-gray-500">El talento cuesta, pero la falta de claridad cuesta más. Honorarios transparentes desde el día uno.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <span class="text-red-500 font-bold text-xl">✕</span>
-                                <div>
-                                    <strong class="text-white block text-sm mb-1">No encontrará juicios morales</strong>
-                                    <p class="text-xs text-gray-500">Yo defiendo derechos y personas, no juzgo historias. Su confianza está blindada por el secreto profesional.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-[#0c1d32] p-8 border border-white/10 rounded-sm relative">
-                        <span class="absolute top-4 right-4 text-6xl text-white/5 font-serif">"</span>
-                        <h3 class="text-white font-serif font-bold mb-8 text-center">La voz de la experiencia</h3>
-                        
-                        <div class="space-y-8">
-                            <blockquote class="border-l-2 border-accent/50 pl-4">
-                                <p class="text-gray-300 text-xs italic leading-relaxed mb-3">
-                                    "El Lic. Santos no me prometió que saldría libre en una semana. Me explicó el panorama real, que era muy feo. Pero trazó una ruta de 6 meses y la cumplió paso a paso. No vende milagros, vende estrategia."
+                                <h3 class="font-serif text-xl font-bold text-gold-400 mb-3">Confidencialidad absoluta</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Yo defiendo derechos y protejo personas, no juzgo historias. 
+                                    Su confianza está blindada por el secreto profesional más estricto.
                                 </p>
-                                <cite class="text-accent text-[10px] font-bold not-italic uppercase">— Ing. Roberto M. (Caso Penal)</cite>
-                            </blockquote>
-
-                            <blockquote class="border-l-2 border-accent/50 pl-4">
-                                <p class="text-gray-300 text-xs italic leading-relaxed mb-3">
-                                    "Veníamos de abogados que solo pedían dinero para trámites fantasma. Alberto revisó el expediente y encontró un error de procedimiento que nadie vio en 2 años. Eso es lo que pagas: el ojo clínico."
-                                </p>
-                                <cite class="text-accent text-[10px] font-bold not-italic uppercase">— Familia G. Villanueva (Patrimonial)</cite>
-                            </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="servicios" class="py-24 bg-[#060f1c] text-center">
-            <div class="max-w-6xl mx-auto px-6">
-                <span class="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">Áreas de Especialidad</span>
-                <h2 class="text-3xl font-serif font-bold text-white mt-4 mb-16">Solo Asuntos Complejos</h2>
-                
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="group border border-white/10 p-8 hover:bg-white/5 transition-all">
-                        <h3 class="text-xl font-serif text-white mb-2 group-hover:text-accent transition-colors">Defensa Penal</h3>
-                        <div class="h-px w-10 bg-accent mb-4"></div>
-                        <p class="text-sm text-gray-400">Delitos patrimoniales y de cuello blanco. Cuando la libertad está en juego, la improvisación es el enemigo.</p>
-                    </div>
-                    <div class="group border border-white/10 p-8 hover:bg-white/5 transition-all">
-                        <h3 class="text-xl font-serif text-white mb-2 group-hover:text-accent transition-colors">Litigio Civil</h3>
-                        <div class="h-px w-10 bg-accent mb-4"></div>
-                        <p class="text-sm text-gray-400">Disputas contractuales y herencias conflictivas. Ingeniería legal para proteger lo que usted construyó.</p>
-                    </div>
-                    <div class="group border border-white/10 p-8 hover:bg-white/5 transition-all">
-                        <h3 class="text-xl font-serif text-white mb-2 group-hover:text-accent transition-colors">Consultoría</h3>
-                        <div class="h-px w-10 bg-accent mb-4"></div>
-                        <p class="text-sm text-gray-400">Análisis de riesgos para empresas. Es más barato prevenir un incendio que apagarlo.</p>
-                    </div>
+    <!-- Testimonios - FONDO CLARO -->
+    <section class="py-24 bg-cream-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="scroll-reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-gold-700 font-serif text-3xl italic mb-4">"La voz de la experiencia"</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <figure class="cream-card rounded-lg p-8 relative">
+                        <span class="material-icons text-gold-600/30 text-6xl absolute top-4 left-4" aria-hidden="true">format_quote</span>
+                        <blockquote class="text-gray-900 text-lg leading-relaxed mb-6 relative z-10 italic font-medium">
+                            "El Lic. Santos no me prometió milagros. 
+                            Me explicó el panorama real, que era complicado. 
+                            Pero trazó una ruta clara de 6 meses y la cumplió paso a paso. 
+                            No vende humo, vende estrategia sólida."
+                        </blockquote>
+                        <figcaption class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                                <span class="text-navy-900 font-bold">RM</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gold-700">Ing. Roberto M.</p>
+                                <p class="text-sm text-gray-700">Caso Penal</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="cream-card rounded-lg p-8 relative">
+                        <span class="material-icons text-gold-600/30 text-6xl absolute top-4 left-4" aria-hidden="true">format_quote</span>
+                        <blockquote class="text-gray-900 text-lg leading-relaxed mb-6 relative z-10 italic font-medium">
+                            "Veníamos de abogados que solo pedían dinero para trámites que nunca avanzaban. 
+                            Alberto revisó el expediente y encontró un error de procedimiento 
+                            que nadie había detectado en 2 años. 
+                            Eso es lo que pagas: tres décadas de experiencia y ojo clínico."
+                        </blockquote>
+                        <figcaption class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                                <span class="text-navy-900 font-bold">GV</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gold-700">Familia G. Villanueva</p>
+                                <p class="text-sm text-gray-700">Litigio Patrimonial</p>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contacto" class="py-24 bg-paper text-[#0c1d32] border-t-8 border-accent">
-            <div class="max-w-4xl mx-auto px-6">
+    <!-- Áreas de Práctica - FONDO OSCURO -->
+    <section id="servicios" class="py-24 bg-gradient-to-b from-navy-900 to-navy-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="scroll-reveal">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold gold-gradient-text mb-4">
+                        Áreas de Práctica
+                    </h2>
+                    <p class="text-xl text-gray-400">Solo asuntos que requieren experiencia y estrategia</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons text-navy-900 text-3xl" aria-hidden="true">gavel</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gold-400 mb-4">Defensa Penal</h3>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Delitos patrimoniales, financieros y de cuello blanco. 
+                            Cuando la libertad o la reputación están en juego, 
+                            no hay espacio para la improvisación.
+                        </p>
+                    </article>
+
+                    <article class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons text-navy-900 text-3xl" aria-hidden="true">account_balance</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gold-400 mb-4">Litigio Civil y Patrimonial</h3>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Disputas contractuales complejas, herencias conflictivas y protección de activos. 
+                            Ingeniería legal para blindar lo que usted construyó durante años.
+                        </p>
+                    </article>
+
+                    <article class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-icons text-navy-900 text-3xl" aria-hidden="true">business_center</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gold-400 mb-4">Consultoría Estratégica</h3>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Análisis de riesgos legales para empresas y particulares. 
+                            Es infinitamente más rentable prevenir un conflicto que litigarlo.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - FONDO CLARO -->
+    <section id="contacto" class="py-24 bg-cream-50 relative overflow-hidden">
+        <div class="absolute inset-0 hero-pattern opacity-30"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="scroll-reveal">
+                <div class="cream-card rounded-lg p-8 md:p-16 gold-border-dark gold-shadow text-center mb-12">
+                    <p class="text-3xl md:text-4xl font-serif italic text-gold-700 font-semibold mb-6">
+                        "Ya no litigio por necesidad, litigio por convicción."
+                    </p>
+                    <p class="text-xl text-gray-800 mb-8">
+                        Elijo mis batallas con criterio para poder ganarlas con excelencia.
+                    </p>
+                </div>
+
                 <div class="text-center mb-12">
-                    <p class="text-lg font-serif font-bold mb-2">"Ya no litigio por hambre, litigio por convicción."</p>
-                    <p class="text-gray-500 text-sm">Elijo mis batallas para poder ganarlas.</p>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-gold-700 mb-6">
+                        ¿Es este despacho para usted?
+                    </h2>
+                    
+                    <div class="cream-card rounded-lg p-8 gold-border-dark max-w-3xl mx-auto">
+                        <p class="text-lg text-gray-800 leading-relaxed mb-6">
+                            No compito por precio. Compito por la calidad del resultado.<br>
+                            <span class="text-gray-700">Si busca "sacar un trámite rápido y barato", probablemente no soy la persona adecuada.</span>
+                        </p>
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            Si busca un abogado con experiencia que analice su caso con seriedad, 
+                            le diga la verdad sin adornos, y ejecute una estrategia sólida, hablemos.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white shadow-2xl rounded-sm overflow-hidden flex flex-col md:flex-row">
-                    <div class="bg-[#0c1d32] p-10 md:w-2/5 text-white flex flex-col justify-center">
-                        <h3 class="font-serif font-bold text-xl mb-4 text-accent">¿Es este el despacho para usted?</h3>
-                        <p class="text-sm text-gray-300 mb-6 leading-relaxed">
-                            No compito por precio. Compito por resultados. Si busca "sacar un trámite rápido y barato", no soy la persona adecuada.
-                        </p>
-                        <p class="text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-6">
-                            Si busca un estratega que blinde sus intereses a largo plazo, hablemos.
-                        </p>
-                    </div>
+                <div class="cream-card rounded-lg p-8 gold-border-dark text-center mb-10">
+                    <p class="text-gold-700 font-serif text-xl font-bold mb-2">Agenda Restringida 2026</p>
+                    <p class="text-gray-700">
+                        Para mantener el nivel de dedicación y obsesión que dedico a cada expediente, 
+                        mi capacidad es deliberadamente limitada.
+                    </p>
+                </div>
 
-                    <div class="p-10 md:w-3/5 flex flex-col justify-center items-center text-center">
-                        <h3 class="font-serif font-bold text-2xl text-[#0c1d32] mb-2">Agenda Restringida 2026</h3>
-                        <p class="text-gray-500 text-xs mb-8 max-w-xs">
-                            Para mantener el nivel de obsesión que dedico a cada expediente, mi capacidad es limitada.
-                        </p>
-
-                        <button onclick="switchView('app')" class="w-full bg-accent hover:bg-[#b08d38] text-[#060f1c] font-bold py-4 rounded-sm tracking-widest uppercase text-xs shadow-lg transition-all flex items-center justify-center gap-2 group">
-                            <span>Iniciar Evaluación de Caso</span>
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                        
-                        <p class="text-[10px] text-gray-400 mt-6 uppercase">Confidencialidad absoluta garantizada</p>
-                    </div>
+                <div class="text-center">
+                    <button onclick="openModal()" class="btn-primary-dark px-10 py-5 rounded text-white font-bold text-xl inline-flex items-center gap-3 group hover-gold-shadow" aria-label="Abrir formulario de evaluación de caso">
+                        Iniciar Evaluación de Caso
+                        <span class="material-icons group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                    </button>
+                    <p class="mt-4 text-gray-700 flex items-center justify-center gap-2">
+                        <span class="material-icons text-sm" aria-hidden="true">lock</span>
+                        Confidencialidad absoluta garantizada desde el primer contacto
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
     </main>
 
-    <footer class="bg-[#0c1d32] border-t-4 border-accent py-12 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
-            <div class="col-span-1 md:col-span-1 flex flex-col gap-4">
-                <div class="flex items-center gap-2 opacity-80">
-                    <img src="logo.png" class="h-8 w-auto grayscale brightness-200">
-                    <span class="font-serif font-bold text-white tracking-widest">SANTOS</span>
+    <!-- Footer - FONDO OSCURO -->
+    <footer class="bg-navy-900 border-t border-white/10 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-900 font-serif font-bold">AS</span>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg font-bold gold-gradient-text">LIC. ALBERTO SANTOS</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Ejercicio del derecho con dignidad, experiencia y criterio.<br>
+                        Oficina privada en Ciudad de México.
+                    </p>
                 </div>
-                <p class="text-gray-300 text-xs leading-relaxed">
-                    Ejercicio del derecho con dignidad, estudio y valentía. Oficina privada en Ciudad de México.
-                </p>
-            </div>
-            
-            <div class="col-span-1">
-                <h4 class="text-accent font-bold uppercase tracking-widest text-xs mb-4">Explorar</h4>
-                <ul class="space-y-2">
-                    <li><a href="#filosofia" class="text-gray-300 hover:text-white transition-colors">Filosofía</a></li>
-                    <li><a href="#servicios" class="text-gray-300 hover:text-white transition-colors">Áreas Prácticas</a></li>
-                    <li><a href="#manifiesto" class="text-gray-300 hover:text-white transition-colors">Código de Ética</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-span-1">
-                <h4 class="text-accent font-bold uppercase tracking-widest text-xs mb-4">Contacto</h4>
-                <ul class="space-y-2 text-gray-300">
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">location_on</span> CDMX, Zona Sur</li>
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">schedule</span> Lun-Jue (Cita Previa)</li>
-                </ul>
+
+                <div>
+                    <h4 class="font-serif text-gold-400 font-bold mb-4">Explorar</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#filosofia" class="text-gray-400 hover:text-gold-400 transition-colors">Filosofía</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-gold-400 transition-colors">Áreas Prácticas</a></li>
+                        <li><a href="#manifiesto" class="text-gray-400 hover:text-gold-400 transition-colors">Código de Ética</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-gold-400 font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="material-icons text-sm text-gold-400" aria-hidden="true">location_on</span>
+                            CDMX, Zona Sur
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-icons text-sm text-gold-400" aria-hidden="true">schedule</span>
+                            Lun-Jue (Cita Previa)
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="col-span-1 md:text-right">
-                <p class="text-gray-500 text-xs mb-2">Derechos Reservados © 2026</p>
-                <a href="#" class="text-gray-500 text-xs hover:text-gray-300">Aviso de Privacidad</a>
-                <div class="mt-4">
-                     <button onclick="switchView('admin')" class="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-accent transition-colors border border-gray-700 hover:border-accent px-3 py-1 rounded">
-                        Acceso Interno
-                    </button>
+            <div class="section-divider mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>Derechos Reservados © 2026</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-gold-400 transition-colors">Aviso de Privacidad</a>
+                    <button onclick="openAdminPanel()" class="hover:text-gold-400 transition-colors">Acceso Interno</button>
                 </div>
             </div>
         </div>
     </footer>
-</div>
 
-<div id="crm-system-container" class="hidden-section">
-    <nav class="crm-nav">
-        <div style="display:flex; align-items:center; gap:10px">
-            <img src="logo.png" style="height:30px">
-            <div><div style="font-size:14px; font-weight:700; color:#c0c8d4">Panel de Gestión</div></div>
-        </div>
-        <div class="tabs">
-            <button class="tab on" onclick="showTab('form',this)">Alta Solicitud</button>
-            <button class="tab" onclick="showTab('crm',this)">Expedientes <span id="badge" style="display:none;background:#c9a84c;color:#0d1b2e;border-radius:10px;padding:1px 6px;font-size:10px;margin-left:4px"></span></button>
-            <button class="tab" style="border-color:#ef4444; color:#ef4444" onclick="exitApp()">Salir</button>
-        </div>
-    </nav>
+    <!-- Modal Form -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="navy-card rounded-lg p-8 gold-border gold-shadow max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold-400" aria-label="Cerrar formulario">
+                    <span class="material-icons">close</span>
+                </button>
 
-    <div class="crm-main">
-        <div id="vform" class="view on">
-            <div style="text-align:center; margin-bottom:30px">
-                <h1 style="color:#e2e8f0; font-size:20px; font-weight:700;">Formulario de Admisión</h1>
-                <p style="color:#94a3b8; font-size:13px">Evaluación de viabilidad de caso</p>
-            </div>
-            
-            <div id="p1">
-                <div class="card-crm">
-                    <h2 style="color:#c9a84c; font-size:14px; text-transform:uppercase; margin-bottom:15px; font-weight:bold">1. Datos del Interesado</h2>
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Nombre Completo</label>
-                    <input id="nombre" type="text" placeholder="Nombre y Apellido">
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px">
-                        <div><label style="color:#94a3b8; font-size:12px; font-weight:bold">Teléfono</label><input id="tel" type="tel"></div>
-                        <div><label style="color:#94a3b8; font-size:12px; font-weight:bold">Email</label><input id="email" type="email"></div>
+                <h2 id="modal-title" class="font-serif text-2xl font-bold gold-gradient-text mb-2">Formulario de Admisión</h2>
+                <p class="text-gray-400 mb-6">Evaluación de viabilidad de caso</p>
+
+                <form id="admissionForm" class="space-y-6">
+                    <div>
+                        <h3 class="text-gold-400 font-semibold mb-4 flex items-center gap-2">
+                            <span class="material-icons text-sm" aria-hidden="true">person</span>
+                            1. Datos del Interesado
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="nombre" class="block text-sm text-gray-400 mb-2">Nombre Completo *</label>
+                                <input type="text" id="nombre" required class="input-field w-full px-4 py-3 rounded text-gray-200" placeholder="Su nombre completo">
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="telefono" class="block text-sm text-gray-400 mb-2">Teléfono *</label>
+                                    <input type="tel" id="telefono" required class="input-field w-full px-4 py-3 rounded text-gray-200" placeholder="(55) 1234 5678">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm text-gray-400 mb-2">Email *</label>
+                                    <input type="email" id="email" required class="input-field w-full px-4 py-3 rounded text-gray-200" placeholder="correo@ejemplo.com">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div style="text-align:right"><button class="btn-crm btn-nxt" onclick="go(2)">Siguiente →</button></div>
-            </div>
 
-            <div id="p2" style="display:none">
-                <div class="card-crm">
-                    <h2 style="color:#c9a84c; font-size:14px; text-transform:uppercase; margin-bottom:15px; font-weight:bold">2. Perfil del Asunto</h2>
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Área Legal</label>
-                    <div style="margin-top:5px; margin-bottom:15px">
-                        <div class="chip" onclick="selChip(this)">Penal</div>
-                        <div class="chip" onclick="selChip(this)">Civil</div>
-                        <div class="chip" onclick="selChip(this)">Familiar</div>
-                        <div class="chip" onclick="selChip(this)">Corporativo</div>
-                        <div class="chip" onclick="selChip(this)">Otro</div>
+                    <div class="section-divider"></div>
+
+                    <div>
+                        <h3 class="text-gold-400 font-semibold mb-4 flex items-center gap-2">
+                            <span class="material-icons text-sm" aria-hidden="true">folder</span>
+                            2. Perfil del Asunto
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="area" class="block text-sm text-gray-400 mb-2">Área Legal *</label>
+                                <select id="area" required class="input-field w-full px-4 py-3 rounded text-gray-200">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Penal">Penal</option>
+                                    <option value="Civil">Civil</option>
+                                    <option value="Familiar">Familiar</option>
+                                    <option value="Corporativo">Corporativo</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="resumen" class="block text-sm text-gray-400 mb-2">Resumen de Hechos *</label>
+                                <textarea id="resumen" required rows="4" class="input-field w-full px-4 py-3 rounded text-gray-200" placeholder="Describa brevemente su caso..."></textarea>
+                            </div>
+                            <div>
+                                <label for="urgencia" class="block text-sm text-gray-400 mb-2">Urgencia *</label>
+                                <select id="urgencia" required class="input-field w-full px-4 py-3 rounded text-gray-200">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Baja">Baja (Preventivo)</option>
+                                    <option value="Media">Media (Atención Requerida)</option>
+                                    <option value="Alta">Alta (Crítica/Legal en curso)</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold">Resumen de Hechos</label>
-                    <textarea id="desc" rows="4" placeholder="Describa brevemente la situación..."></textarea>
-                    <label style="color:#94a3b8; font-size:12px; font-weight:bold; margin-top:10px">Urgencia</label>
-                    <select id="urgencia">
-                        <option value="baja">Baja (Preventivo)</option>
-                        <option value="media">Media (Atención Requerida)</option>
-                        <option value="alta">Alta (Crítica/Legal en curso)</option>
-                    </select>
-                </div>
-                <div style="display:flex; justify-content:space-between">
-                    <button class="btn-crm" style="border:1px solid #2d4a6d; color:#94a3b8; background:transparent" onclick="go(1)">Atrás</button>
-                    <button class="btn-crm btn-nxt" onclick="submit()">Enviar Solicitud</button>
-                </div>
-            </div>
-        </div>
 
-        <div id="vcrm" class="view">
-            <div style="display:flex; justify-content:space-between; margin-bottom:15px">
-                <h2 style="color:#fff; font-size:18px">Solicitudes Pendientes</h2>
-                <button onclick="clearData()" style="background:#ef4444; border:none; color:white; padding:5px 12px; border-radius:4px; font-size:11px; cursor:pointer">Limpiar BD</button>
-            </div>
-            <div class="card-crm" style="padding:0; overflow-x:auto">
-                <table class="crm-table">
-                    <thead><tr><th>Fecha</th><th>Nombre</th><th>Teléfono</th><th>Área</th><th>Estado</th></tr></thead>
-                    <tbody id="tbody"></tbody>
-                </table>
-                <div id="empty-msg" style="padding:30px; text-align:center; color:#64748b; font-size:13px">Sin registros activos</div>
+                    <div class="flex gap-4 pt-4">
+                        <button type="button" onclick="closeModal()" class="flex-1 px-6 py-3 rounded gold-border text-gold-400 font-semibold hover:bg-gold-400/10 transition-all">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="flex-1 btn-primary px-6 py-3 rounded text-navy-900 font-bold">
+                            Enviar Solicitud
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    /* ════ LÓGICA DEL SISTEMA ════ */
-    const PASSWORD = "admin123";
-    let DB = JSON.parse(localStorage.getItem('albertosantos_db')) || [];
-    let selectedArea = "";
-    
-    updateBadge();
+    <!-- Admin Panel Modal -->
+    <div id="adminModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeAdminPanel()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="navy-card rounded-lg p-8 gold-border gold-shadow max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+                <button onclick="closeAdminPanel()" class="absolute top-4 right-4 text-gray-400 hover:text-gold-400" aria-label="Cerrar panel de administración">
+                    <span class="material-icons">close</span>
+                </button>
 
-    // -- NAVEGACIÓN --
-    function switchView(target) {
-        const home = document.getElementById('public-landing');
-        const app = document.getElementById('crm-system-container');
-        
-        if (target === 'app') { // Cliente
-            home.classList.add('hidden-section');
-            app.classList.remove('hidden-section');
-            showTab('form');
-            window.scrollTo(0,0);
-        } else if (target === 'admin') { // Admin
-            const pass = prompt("🔐 Acceso Restringido\nIngrese clave de titular:");
-            if (pass === PASSWORD) {
-                home.classList.add('hidden-section');
-                app.classList.remove('hidden-section');
-                showTab('crm');
-            } else if(pass !== null) alert("⛔ Clave incorrecta");
-        }
-    }
+                <h2 id="admin-title" class="font-serif text-2xl font-bold gold-gradient-text mb-6">Panel de Gestión</h2>
 
-    function exitApp() {
-        if(confirm("¿Regresar al sitio público?")) {
-            document.getElementById('crm-system-container').classList.add('hidden-section');
-            document.getElementById('public-landing').classList.remove('hidden-section');
-            window.scrollTo(0,0);
-        }
-    }
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center">
+                        <button onclick="showForm()" class="btn-primary px-6 py-3 rounded text-navy-900 font-semibold inline-flex items-center gap-2">
+                            <span class="material-icons text-sm" aria-hidden="true">add</span>
+                            Alta Solicitud
+                        </button>
+                        <button onclick="clearDatabase()" class="px-6 py-3 rounded border border-red-500 text-red-400 font-semibold hover:bg-red-500/10 transition-all inline-flex items-center gap-2">
+                            <span class="material-icons text-sm" aria-hidden="true">delete</span>
+                            Limpiar BD
+                        </button>
+                    </div>
 
-    function showTab(id, btn) {
-        document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
-        document.getElementById('v'+id).classList.add('on');
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
-        if(btn) btn.classList.add('on');
-        if(id === 'crm') renderTable();
-    }
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-gold-400/30">
+                                    <th class="pb-3 text-gold-400 font-semibold">Fecha</th>
+                                    <th class="pb-3 text-gold-400 font-semibold">Nombre</th>
+                                    <th class="pb-3 text-gold-400 font-semibold">Teléfono</th>
+                                    <th class="pb-3 text-gold-400 font-semibold">Área</th>
+                                    <th class="pb-3 text-gold-400 font-semibold">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="requestsTable" class="text-gray-300">
+                                <tr>
+                                    <td colspan="5" class="py-8 text-center text-gray-500">Sin registros activos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    // -- FORMULARIO --
-    function go(n) {
-        if(n===2 && !document.getElementById('nombre').value) return alert("Por favor indique su nombre.");
-        document.getElementById('p1').style.display = n===1?'block':'none';
-        document.getElementById('p2').style.display = n===2?'block':'none';
-    }
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    function selChip(el) {
-        document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
-        el.classList.add('on');
-        selectedArea = el.innerText;
-    }
-
-    function submit() {
-        if(!selectedArea) return alert("Seleccione el área relacionada.");
-        
-        const rec = {
-            id: Date.now(),
-            date: new Date().toLocaleDateString(),
-            name: document.getElementById('nombre').value,
-            tel: document.getElementById('tel').value,
-            area: selectedArea,
-            desc: document.getElementById('desc').value,
-            urgency: document.getElementById('urgencia').value
-        };
-        
-        DB.push(rec);
-        localStorage.setItem('albertosantos_db', JSON.stringify(DB));
-        updateBadge();
-        
-        alert("✅ Solicitud Recibida.\n\nEl Lic. Santos evaluará la viabilidad de su caso. Si cumple con el perfil del despacho, le contactaremos en breve.");
-        
-        // Reset
-        document.getElementById('nombre').value = "";
-        document.getElementById('tel').value = "";
-        document.getElementById('email').value = "";
-        document.getElementById('desc').value = "";
-        selectedArea = "";
-        document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
-        go(1);
-        exitApp();
-    }
-
-    // -- ADMIN PANEL --
-    function renderTable() {
-        const tbody = document.getElementById('tbody');
-        tbody.innerHTML = "";
-        DB.slice().reverse().forEach(r => {
-            const tr = document.createElement('tr');
-            const color = r.urgency==='alta'?'#ef4444':r.urgency==='media'?'#f59e0b':'#10b981';
-            tr.innerHTML = `
-                <td>${r.date}</td>
-                <td style="font-weight:bold; color:#fff">${r.name}</td>
-                <td><a href="tel:${r.tel}" style="color:#c9a84c;text-decoration:none">${r.tel}</a></td>
-                <td><span style="border:1px solid #2d4a6d; padding:2px 6px; border-radius:4px; font-size:11px">${r.area}</span></td>
-                <td><div style="width:8px; height:8px; border-radius:50%; background:${color}; display:inline-block"></div></td>
-            `;
-            tr.onclick = () => alert(`📄 DETALLE:\n\nNombre: ${r.name}\nAsunto: ${r.desc}\nContacto: ${r.tel}`);
-            tbody.appendChild(tr);
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
         });
-        updateBadge();
-    }
 
-    function updateBadge() {
-        const b = document.getElementById('badge');
-        const e = document.getElementById('empty-msg');
-        if(DB.length > 0) { b.style.display='inline-block'; b.innerText=DB.length; e.style.display='none'; }
-        else { b.style.display='none'; e.style.display='block'; }
-    }
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    function clearData() {
-        if(confirm("⚠️ ¿Borrar historial completo?")) { DB=[]; localStorage.setItem('albertosantos_db', JSON.stringify(DB)); renderTable(); }
-    }
-</script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('nombre').focus();
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function openAdminPanel() {
+            document.getElementById('adminModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            loadRequests();
+        }
+
+        function closeAdminPanel() {
+            document.getElementById('adminModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Form Submission
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                fecha: new Date().toISOString(),
+                nombre: document.getElementById('nombre').value,
+                telefono: document.getElementById('telefono').value,
+                email: document.getElementById('email').value,
+                area: document.getElementById('area').value,
+                resumen: document.getElementById('resumen').value,
+                urgencia: document.getElementById('urgencia').value,
+                estado: 'Pendiente'
+            };
+
+            let requests = JSON.parse(localStorage.getItem('solicitudes') || '[]');
+            requests.push(formData);
+            localStorage.setItem('solicitudes', JSON.stringify(requests));
+
+            alert('Solicitud enviada. Nos pondremos en contacto en menos de 24 horas.');
+            closeModal();
+            this.reset();
+        });
+
+        // Load Requests
+        function loadRequests() {
+            const requests = JSON.parse(localStorage.getItem('solicitudes') || '[]');
+            const tbody = document.getElementById('requestsTable');
+            
+            if (requests.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="py-8 text-center text-gray-500">Sin registros activos</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = requests.map((req, index) => `
+                <tr class="border-b border-white/5 hover:bg-white/5">
+                    <td class="py-3 text-sm">${new Date(req.fecha).toLocaleDateString()}</td>
+                    <td class="py-3">${req.nombre}</td>
+                    <td class="py-3 text-sm">${req.telefono}</td>
+                    <td class="py-3">${req.area}</td>
+                    <td class="py-3">
+                        <span class="px-3 py-1 rounded-full text-xs ${
+                            req.estado === 'Pendiente' ? 'bg-yellow-500/20 text-yellow-400' :
+                            req.estado === 'Contactado' ? 'bg-blue-500/20 text-blue-400' :
+                            'bg-green-500/20 text-green-400'
+                        }">${req.estado}</span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function clearDatabase() {
+            if (confirm('¿Está seguro de eliminar todos los registros?')) {
+                localStorage.removeItem('solicitudes');
+                loadRequests();
+            }
+        }
+
+        function showForm() {
+            closeAdminPanel();
+            openModal();
+        }
+
+        // Navbar Scroll Effect
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('shadow-lg');
+                nav.style.background = 'rgba(10, 22, 40, 0.95)';
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.style.background = '';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeAdminPanel();
+            }
+        });
+    </script>
 </body>
 </html>
+
