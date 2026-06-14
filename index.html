@@ -1,159 +1,422 @@
 <!DOCTYPE html>
-<html class="light" lang="es">
+<html lang="es-MX">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lic. Alberto Santos | Estrategia Jurídica Selectiva</title>
+    <meta name="description" content="Despacho jurídico especializado en casos complejos. 30 años de experiencia. Máximo 10 casos anuales por excelencia. CDMX.">
     
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <script id="tailwind-config">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0c1d32", 
-                        "accent": "#c9a84c", 
-                        "accent-light": "#eecf76",
-                        "accent-dim": "#8c7335",
-                        "background-dark": "#060f1c",
-                        "surface": "#0a1625",
-                        "paper": "#f4f4f5",
+                        'navy-900': '#0a1628',
+                        'navy-800': '#1e3a5f',
+                        'navy-700': '#2e4f6f',
+                        'cream-50': '#faf8f5',
+                        'cream-100': '#f5f0e8',
+                        'gold-400': '#c9a961',
+                        'gold-500': '#b8860b',
+                        'gold-600': '#9a7209',
                     },
                     fontFamily: {
-                        "display": ["Manrope", "sans-serif"],
-                        "serif": ["Cinzel", "serif"],
-                    },
-                    backgroundImage: {
-                        'navy-gradient': 'linear-gradient(180deg, #0c1d32 0%, #060f1c 100%)',
-                        'gold-gradient': 'linear-gradient(135deg, #c9a84c 0%, #f4e2aa 50%, #c9a84c 100%)',
+                        'serif': ['Cinzel', 'serif'],
+                        'elegant': ['Cormorant Garamond', 'serif'],
                     }
-                },
-            },
+                }
+            }
         }
     </script>
 
     <style>
-        body { font-family: 'Manrope', sans-serif; scroll-behavior: smooth; }
-        .font-serif { font-family: 'Cinzel', serif; }
-        .hidden-section { display: none !important; }
-        
-        /* Efectos de Texto */
-        .text-gold-gradient {
-            background: linear-gradient(to bottom, #cfb56b 0%, #f4e2aa 50%, #8c7335 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        body {
+            font-family: 'Cormorant Garamond', serif;
         }
         
-        /* Separadores */
-        .divider-v { width: 1px; height: 40px; background: rgba(201,168,76,0.3); margin: 0 auto; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #c9a961 0%, #d4af37 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         
-        /* Navegación */
-        .nav-link { position: relative; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0; background-color: #c9a84c; transition: width 0.3s; }
-        .nav-link:hover::after { width: 100%; }
-    </style>
+        .gold-gradient-text-dark {
+            background: linear-gradient(135deg, #9a7209 0%, #b8860b 50%, #c9a961 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gold-border {
+            border: 1px solid rgba(201, 169, 97, 0.3);
+        }
+        
+        .gold-border-dark {
+            border: 1px solid rgba(154, 114, 9, 0.3);
+        }
+        
+        .gold-shadow {
+            box-shadow: 0 0 30px rgba(201, 169, 97, 0.15);
+        }
+        
+        .hover-gold-shadow:hover {
+            box-shadow: 0 0 40px rgba(201, 169, 97, 0.25);
+        }
+        
+        .navy-card {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+            backdrop-filter: blur(10px);
+        }
+        
+        .cream-card {
+            background: linear-gradient(135deg, rgba(250, 248, 245, 0.9) 0%, rgba(245, 240, 232, 0.95) 100%);
+            backdrop-filter: blur(10px);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.03) 0%, transparent 50%);
+        }
+        
+        .input-field {
+            background: rgba(10, 22, 40, 0.6);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus {
+            border-color: #c9a961;
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+            outline: none;
+        }
+        
+        .input-field-light {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(154, 114, 9, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .input-field-light:focus {
+            border-color: #b8860b;
+            box-shadow: 0 0 0 3px rgba(154, 114, 9, 0.1);
+            outline: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #c9a961 0%, #9a7209 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+        }
+        
+        .btn-primary-dark {
+            background: linear-gradient(135deg, #9a7209 0%, #b8860b 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-dark:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(154, 114, 9, 0.3);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 97, 0.4) 50%, transparent 100%);
+        }
+        
+        .section-divider-dark {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(154, 114, 9, 0.4) 50%, transparent 100%);
+        }
 
-    <style>
-        #crm-system-container { font-family: 'Segoe UI', sans-serif; background: #0d1b2e; color: #eef2f7; min-height: 100vh; font-size: 16px; line-height: 1.5; }
-        #crm-system-container * { box-sizing: border-box; }
-        .crm-nav { background: #112240; border-bottom: 1px solid #1e3a5f; padding: 12px 22px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-        .tabs { display: flex; gap: 6px; }
-        .tab { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid #1e3a5f; background: transparent; color: #7a8fa8; transition:0.2s; }
-        .tab.on { background: #1a2e48; border-color: #c9a84c; color: #c9a84c; }
-        .crm-main { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
-        .view { display: none; animation: fadeCRM 0.3s; } .view.on { display: block; }
-        @keyframes fadeCRM { from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:translateY(0)} }
-        .card-crm { background: #112240; border: 1px solid #1e3a5f; border-radius: 12px; padding: 26px; margin-bottom: 20px; }
-        #crm-system-container input, #crm-system-container select, #crm-system-container textarea { background: #1a2e48; border: 1px solid #2d4a6d; border-radius: 6px; color: #fff; padding: 10px 12px; width: 100%; display: block; margin-top: 4px; }
-        .btn-crm { padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer; border: none; }
-        .btn-nxt { background: #c9a84c; color: #0d1b2e; }
-        .crm-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
-        .crm-table th { text-align: left; padding: 12px; background: #0f2038; color: #c9a84c; border-bottom: 2px solid #1e3a5f; }
-        .crm-table td { padding: 12px; border-bottom: 1px solid #1e3a5f; color: #cbd5e1; }
-        .chip { padding: 6px 14px; border-radius: 20px; font-size: 13px; border: 1px solid #2d4a6d; background: #1a2e48; color: #94a3b8; cursor: pointer; display:inline-block; margin:2px}
-        .chip.on { background: rgba(201,168,76,0.2); border-color: #c9a84c; color: #c9a84c; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #c9a961;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b8860b;
+        }
+        
+        .logo-container {
+            filter: drop-shadow(0 4px 20px rgba(201, 169, 97, 0.3));
+        }
     </style>
 </head>
+<body class="antialiased">
 
-<body class="bg-[#060f1c] text-gray-300 font-display antialiased">
-
-<div id="public-landing">
-    
-    <header class="sticky top-0 z-50 w-full bg-[#060f1c]/95 backdrop-blur-md border-b border-white/10 shadow-xl">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <div class="flex items-center gap-4 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <img src="logo.png" alt="Lic. Alberto Santos" class="h-16 w-auto object-contain drop-shadow-md">
-                <div class="hidden lg:flex flex-col border-l border-white/20 pl-4">
-                    <span class="text-sm font-serif font-bold tracking-widest text-white uppercase leading-none">Lic. Alberto Santos</span>
-                    <span class="text-[10px] text-accent tracking-[0.3em] uppercase leading-none mt-1.5">Abogado Titular</span>
-                </div>
-            </div>
-
-            <nav class="hidden md:flex items-center gap-10">
-                <a href="#filosofia" class="nav-link text-[11px] font-bold uppercase tracking-widest text-gray-300 hover:text-white">Filosofía</a>
-                <a href="#servicios" class="nav-link text-[11px] font-bold uppercase tracking-widest text-gray-300 hover:text-white">Práctica</a>
-                <a href="#manifiesto" class="nav-link text-[11px] font-bold uppercase tracking-widest text-gray-300 hover:text-white">Ética</a>
-                <a href="#contacto" class="bg-transparent border border-accent text-accent text-[10px] font-bold px-6 py-3 rounded-sm uppercase tracking-widest hover:bg-accent hover:text-[#060f1c] transition-all duration-300">
-                    Iniciar Evaluación
-                </a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="flex flex-col">
-        
-        <section class="relative py-28 md:py-36 flex flex-col items-center justify-center bg-navy-gradient px-6 border-b border-white/5">
-            <div class="max-w-4xl mx-auto text-center relative z-10">
-                
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight tracking-tight mb-8 text-white drop-shadow-2xl">
-                    La ley no es un juego <br/>
-                    <span class="text-gold-gradient">de azar.</span>
-                </h1>
-                
-                <div class="bg-white/5 border border-white/10 p-6 md:p-8 rounded-sm backdrop-blur-sm max-w-3xl mx-auto mb-10 shadow-2xl">
-                    <p class="text-gray-200 text-sm md:text-lg font-light leading-relaxed">
-                        <strong class="text-accent block mb-2 uppercase tracking-widest text-xs">Matemática Simple:</strong>
-                        Un abogado con 100 casos activos le dedica 10 minutos al mes al suyo. 
-                        Yo acepto un máximo de <span class="text-white font-bold underline decoration-accent decoration-2 underline-offset-4">10 casos complejos al año</span>.
-                        <br><br>
-                        Usted decide qué nivel de defensa necesita su libertad o su patrimonio.
-                    </p>
-                </div>
-                
-                <div class="flex justify-center animate-pulse">
-                    <span class="material-symbols-outlined text-accent/50 text-3xl">keyboard_arrow_down</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="filosofia" class="py-24 bg-paper text-[#0c1d32]">
-            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-5 relative">
-                    <div class="border-l-4 border-accent pl-6 py-2">
-                        <h2 class="text-4xl font-serif font-bold mb-4 leading-tight">30 años corrigiendo errores.</h2>
-                        <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Trayectoria · Criterio · Carácter</span>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 navy-card border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                        <span class="text-navy-900 font-serif font-bold text-xl">AS</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-xl font-bold gold-gradient-text">Lic. Alberto Santos</h1>
+                        <p class="text-xs text-gray-400 tracking-wider">Abogado Titular</p>
                     </div>
                 </div>
-                <div class="md:col-span-7">
-                    <p class="text-lg leading-relaxed font-light mb-6 text-justify">
-                        La ley está en los libros, pero la estrategia se aprende en las trincheras. He pasado tres décadas viendo cómo casos ganables se pierden por la inexperiencia de abogados que prometen el cielo y las estrellas.
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#filosofia" class="text-gray-300 hover:text-gold-400 transition-colors text-sm tracking-wider">Filosofía</a>
+                    <a href="#servicios" class="text-gray-300 hover:text-gold-400 transition-colors text-sm tracking-wider">Práctica</a>
+                    <a href="#manifiesto" class="text-gray-300 hover:text-gold-400 transition-colors text-sm tracking-wider">Ética</a>
+                    <a href="#contacto" class="btn-primary px-6 py-2.5 rounded text-navy-900 font-semibold text-sm">
+                        Iniciar Evaluación
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gold-400">
+                        <span class="material-icons">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden navy-card border-t border-white/10">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#filosofia" class="block px-3 py-2 text-gray-300 hover:text-gold-400">Filosofía</a>
+                <a href="#servicios" class="block px-3 py-2 text-gray-300 hover:text-gold-400">Práctica</a>
+                <a href="#manifiesto" class="block px-3 py-2 text-gray-300 hover:text-gold-400">Ética</a>
+                <a href="#contacto" class="block px-3 py-2 text-gold-400 font-semibold">Iniciar Evaluación</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - FONDO OSCURO -->
+    <section class="relative min-h-screen flex items-center justify-center hero-pattern pt-20 bg-navy-900">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-navy-900/70 to-navy-900"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="scroll-reveal">
+                <!-- Logo Original -->
+                <div class="mb-8 inline-block logo-container">
+                    <img src="logo.png" alt="Lic. Alberto Santos - Logo" class="w-48 h-48 mx-auto object-contain">
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 gold-gradient-text">
+                    La ley no es un juego de azar.
+                </h1>
+                
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-8"></div>
+                
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 font-elegant leading-relaxed max-w-4xl mx-auto">
+                    La diferencia entre el "deber ser" y lo que realmente sucede en un tribunal 
+                    se mide en décadas de experiencia, no en promesas.
+                </p>
+                
+                <div class="navy-card rounded-lg p-8 md:p-10 gold-border gold-shadow max-w-3xl mx-auto mb-10">
+                    <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+                        Acepto un máximo de <span class="gold-gradient-text font-bold text-2xl">10 casos complejos al año</span>.<br>
+                        <span class="text-gray-400">No por limitación de tiempo, sino por obsesión con la excelencia.</span>
                     </p>
-                    <p class="text-sm font-bold text-[#0c1d32] uppercase tracking-widest mb-2">— Una verdad incómoda:</p>
-                    <p class="text-base leading-relaxed text-gray-600 mb-8">
-                        La mayoría de los despachos operan como fábricas: volumen alto, atención baja y el trabajo real lo hacen pasantes. 
-                        <strong>Mi práctica es un taller de precisión.</strong> Si me contrata a mí, me tiene a mí. No delego lo importante.
+                </div>
+                
+                <p class="text-lg text-gray-400 mb-10 font-elegant">
+                    Usted decide si su libertad o su patrimonio merecen esa dedicación.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contacto" class="btn-primary px-8 py-4 rounded text-navy-900 font-bold text-lg inline-flex items-center gap-2 group">
+                        Iniciar Evaluación de Caso
+                        <span class="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <a href="#filosofia" class="px-8 py-4 rounded gold-border text-gold-400 font-semibold text-lg hover:bg-gold-400/10 transition-all inline-flex items-center gap-2">
+                        Conocer Filosofía
+                        <span class="material-icons text-sm">keyboard_arrow_down</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <span class="material-icons text-gold-400 text-3xl">keyboard_arrow_down</span>
+        </div>
+    </section>
+
+    <!-- Filosofía/Trayectoria Section - FONDO CLARO -->
+    <section id="filosofia" class="py-24 bg-cream-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="scroll-reveal">
+                <div class="text-center mb-16">
+                    <p class="text-gold-500 font-serif text-2xl md:text-3xl font-bold mb-4">
+                        30 años entendiendo cómo funciona realmente el sistema.
+                    </p>
+                    <div class="flex items-center justify-center gap-4 text-gray-600 text-sm tracking-widest">
+                        <span>Trayectoria</span>
+                        <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                        <span>Criterio</span>
+                        <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+                        <span>Serenidad</span>
+                    </div>
+                </div>
+
+                <div class="cream-card rounded-lg p-8 md:p-12 gold-border-dark mb-12">
+                    <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 font-elegant">
+                        La ley está en los códigos, pero la estrategia se forja en la práctica diaria. 
+                        He dedicado tres décadas a comprender la diferencia entre lo que la ley dice 
+                        y lo que los tribunales hacen.
+                    </p>
+                    <p class="text-lg text-gold-500 font-semibold italic">
+                        Esa brecha—entre el "deber ser" y la realidad—es donde se ganan o pierden los casos.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-gold-500 text-3xl">person_play</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">El Titular Trabaja</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    No hay intermediarios ni pasantes. Su expediente no pasa de mano en mano. 
+                                    La estrategia la diseño y la ejecuto yo, de principio a fin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-gold-500 text-3xl">volume_off</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">La Discreción es Rentable</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    A veces, la mejor victoria es la que no hace ruido. 
+                                    Priorizo la solución estratégica sobre el litigio innecesario. 
+                                    El silencio protege su reputación y su patrimonio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-gold-500 text-3xl">medical_services</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">Diagnóstico Directo</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    En la primera consulta sabrá si su caso tiene viabilidad real. 
+                                    Cobrarle por un asunto perdido va contra mi ética profesional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cream-card rounded-lg p-8 gold-border-dark hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-gold-500 text-3xl">gavel</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-gold-500 mb-3">No le diré lo que quiere escuchar.</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Le diré, con honestidad y estrategia, exactamente dónde estamos parados 
+                                    y cuál es la ruta más sólida para salir de ahí.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-2xl md:text-3xl font-serif italic gold-gradient-text-dark">
+                        "Un abogado barato sale carísimo."
                     </p>
                 </div>
             </div>
-            
-            <div class="max-w-6xl mx-auto px-6 mt-16 grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-8 shadow-lg border-t-4 border-[#0c1d32] hover:border-accent transition-colors">
-                    <span class="material-symbols-outlined text-4xl text-accent mb-4">person_play</span>
+        </div>
+    </section>
+
+    <!-- Manifiesto de Ética - FONDO OSCURO -->
+    <section id="manifiesto" class="py-24 bg-gradient-to-b from-navy-800 to-navy-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="scroll-reveal">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold gold-gradient-text mb-4">
+                        Código de Ética Profesional
+                    </h2>
+                    <p class="text-xl text-gray-400">Lo que me comprometo a mantener</p>
+                </div>
+
+                <div class="navy-card rounded-lg p-8 md:p-12 gold-border mb-8">
+                    <p class="text-lg text-gray-300 leading-relaxed text-center mb-8">
+                        He construido mi reputación sobre principios que no son negociables. 
+                        Mi lealtad no se renta, se demuestra con resultados y transparencia.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-green-400 text-3xl flex-shrink-0">check_circle</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-gold-400 mb-3">Garantías realistas</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Quien le promete un resultado al 100% le está mintiendo. 
+                                    Yo me comprometo con la mejor estrategia jurídica posible, 
+                                    ejecutada con rigor y dedicación.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-green-400 text-3xl flex-shrink-0">check_circle</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-gold-400 mb-3">Honorarios transparentes</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    El talento tiene un valor, pero la claridad no tiene precio. 
+                                    Desde la primera conversación, usted sabrá exactamente cuánto cuesta 
+                                    y por qué. Sin sorpresas, sin letra pequeña.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navy-card rounded-lg p-8 gold-border hover-gold-shadow transition-all">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-green-400 text-3xl flex-shrink-0">check_circle</span>
+                            <div>
+                                <h3 class="font-serif text-xl f text-4xl text-accent mb-4">person_play</span>
                     <h3 class="font-serif font-bold text-lg mb-2">El Titular Trabaja</h3>
                     <p class="text-sm text-gray-600">No hay intermediarios. Su expediente no pasa de mano en mano. La estrategia la diseño y la ejecuto yo.</p>
                 </div>
